@@ -4,6 +4,8 @@
 
 import type { Trails } from "@/types/MountainTypes";
 
+const NORMALIZE_BY = 15;
+
 export default function DifficultyBar({ trails }: { trails: Trails }) {
     // Normalize trail distribution to be out of 10
     // TODO: fix rounding errors
@@ -16,12 +18,12 @@ export default function DifficultyBar({ trails }: { trails: Trails }) {
         }
 
         return {
-            bunny: Math.round((trails.bunny / totalTrails) * 10),
-            green: Math.round((trails.green / totalTrails) * 10),
-            blue: Math.round((trails.blue / totalTrails) * 10),
-            black: Math.round((trails.black / totalTrails) * 10),
-            doubleBlack: Math.round((trails.doubleBlack / totalTrails) * 10),
-            glades: trails.glades ? Math.round((trails.glades / totalTrails) * 10) : 0,
+            bunny: Math.round((trails.bunny / totalTrails) * NORMALIZE_BY),
+            green: Math.round((trails.green / totalTrails) * NORMALIZE_BY),
+            blue: Math.round((trails.blue / totalTrails) * NORMALIZE_BY),
+            black: Math.round((trails.black / totalTrails) * NORMALIZE_BY),
+            doubleBlack: Math.round((trails.doubleBlack / totalTrails) * NORMALIZE_BY),
+            glades: trails.glades ? Math.round((trails.glades / totalTrails) * NORMALIZE_BY) : 0,
         }
     }
 
