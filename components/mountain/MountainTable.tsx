@@ -4,7 +4,7 @@
 
 import type { Mountain } from "@/types/MountainTypes";
 
-import Difficulties from "@/components/filters/DifficultyFilter";
+import DifficultyBar from "@/components/mountain/DifficultyBar";
 
 interface MountainTableProps {
   mountains: Mountain[];
@@ -62,7 +62,7 @@ export default function MountainTable({
 
               {/* Trail difficulty */}
               <td className="px-4 py-3">
-                <span>🟩🟩🟦🟦🟦⬥⬥⬥♦️🌲</span>
+                <DifficultyBar trails={mountain.trails} />
               </td>
 
               {/* Adult Lift Ticket Price */}
