@@ -438,7 +438,7 @@
 
         "trails": {
             "bunny": 2,
-            "green": 18,
+            "green": 20,
             "blue": 40,
             "black": 40,
             "doubleBlack": 0,
@@ -496,7 +496,7 @@
 
         "trails": {
             "bunny": 3,
-            "green": 30,
+            "green": 32,
             "blue": 37,
             "black": 30,
             "doubleBlack": 0,
@@ -559,7 +559,7 @@
 
         "trails": {
             "bunny": 2,
-            "green": 14,
+            "green": 16,
             "blue": 55,
             "black": 16,
             "doubleBlack": 13,
@@ -623,5 +623,242 @@
         "trailMapPdf": "https://static1.squarespace.com/static/62503704223b711a550b3e6f/t/6917892081bdec22f24afe40/1763150112862/Alpine+Trail+Map+With+Night+Ski_Brochure+Front_2526.jpg",
 
         "lastUpdated": "2026-08-07T15:12:00"
+    },
+    {
+        "id": "12",
+        "name": "Wachusett",
+        "state": "MA",
+
+        "location": {
+            "latitude": 42.492998028,
+            "longitude": -71.885163126
+        },
+        "parkingLots": [],
+        "address": "41 Mile Hill Rd, Westminster, MA 01473",
+
+        "summit": 2006,
+        "verticalDrop": 1000,
+
+        "passes": [
+            {
+                "passName": "None"
+            }
+        ],
+
+        "trails": {
+            "bunny": 4,
+            "green": 7,
+            "blue": 17,
+            "black": 5,
+            "doubleBlack": 0,
+            "glades": 0
+        },
+        "liftsOpenWeekdays": "9:00",
+        "liftsCloseWeekdays": "21:30",
+        "liftsOpenWeekends": "8:00",
+        "liftsCloseWeekends": "21:30",
+        "nightSkiing": true,
+
+        "pricing": {
+
+        },
+
+        "website": "https://www.wachusett.com/",
+        "trailMapPdf": "https://www.wachusett.com/wp-content/uploads/2025/11/Trailmap2025_1296x1256px.jpg",
+
+        "lastUpdated": "2026-08-08T01:11:00"
+    },
+    {
+        "id": "13",
+        "name": "Wildcat",
+        "state": "NH",
+
+        "location": {
+            "latitude": 44.255332312,
+            "longitude": -71.20083253
+        },
+        "parkingLots": [],
+        "address": "542 NH-16, Gorham, NH 03581",
+
+        "summit": 4062,
+        "verticalDrop": 2112,
+        "baseElevation": 1950,
+
+        "passes": [
+            {
+                "passName": "Epic",
+                "passRestrictions": [
+                    {
+                        "passType": "Day",
+                        "restrictions": "1-7 total days"
+                    }
+                ]
+            }
+        ],
+
+        "trails": {
+            "bunny": 1,
+            "green": 19,
+            "blue": 47,
+            "black": 33,
+            "doubleBlack": 0,
+            "glades": 9
+        },
+        "liftsOpenWeekdays": "9:00",
+        "liftsCloseWeekdays": "16:00",
+        "liftsOpenWeekends": "8:00",
+        "liftsCloseWeekends": "16:00",
+        "nightSkiing": true,
+
+        "pricing": {
+
+        },
+
+        "website": "https://www.skiwildcat.com/",
+        "trailMapPdf": "https://www.skiwildcat.com/-/aemasset/sitecore/wildcat/maps/winter-2025-2026/20251226_WC_winter-trail_map_001.pdf",
+
+        "lastUpdated": "2026-08-08T01:16:00"
+    },
+    {
+        "id": "14",
+        "name": "Smugglers' Notch",
+        "state": "VT",
+
+        "location": {
+            "latitude": 44.555331112,
+            "longitude": -72.795663484
+        },
+        "parkingLots": [],
+        "address": "4323 VT-108, Jeffersonville, VT 05464",
+
+        "summit": 3640,
+        "verticalDrop": 2610,
+        "baseElevation": 1030,
+
+        "passes": [
+            {
+                "passName": "None"
+            }
+        ],
+
+        "trails": {
+            "bunny": 2,
+            "green": 19,
+            "blue": 27,
+            "black": 13,
+            "doubleBlack": 6,
+            "glades": 5
+        },
+        "liftsOpenWeekdays": "9:00",
+        "liftsCloseWeekdays": "16:00",
+        "liftsOpenWeekends": "8:00",
+        "liftsCloseWeekends": "16:00",
+        "nightSkiing": false,
+
+        "pricing": {
+            "liftTicketWeekday": 85,
+            "liftTicketWeekend": 125
+        },
+
+        "website": "https://www.smuggs.com/",
+        "trailMapPdf": "https://www.smuggs.com/wp-content/uploads/2024/11/trailmap_2425.pdf",
+
+        "lastUpdated": "2026-08-08T01:28:00"
+    },
+    {
+        "id": "15",
+        "name": "Attitash",
+        "state": "NH",
+
+        "location": {
+            "latitude": 44.083139,
+            "longitude": -71.231222
+        },
+        "parkingLots": [],
+        "address": "775 US-302, Bartlett, NH 03812",
+
+        "summit": 2350,
+        "verticalDrop": 1750,
+
+        "passes": [
+            {
+                "passName": "Epic",
+                "passRestrictions": [
+                    {
+                        "passType": "Day",
+                        "restrictions": "1-7 total days"
+                    }
+                ]
+            }
+        ],
+
+        "trails": {
+            "bunny": 1,
+            "green": 29,
+            "blue": 44,
+            "black": 27,
+            "doubleBlack": 0,
+            "glades": 0,
+            "terrainParks": 3
+        },
+        "liftsOpenWeekdays": "9:00",
+        "liftsCloseWeekdays": "16:00",
+        "liftsOpenWeekends": "8:00",
+        "liftsCloseWeekends": "16:00",
+        "nightSkiing": false,
+
+        "pricing": {
+
+        },
+
+        "website": "https://www.attitash.com/",
+        "trailMapPdf": "https://www.attitash.com/-/aemasset/sitecore/attitash/maps/winter-2025-2026/20251226_AT_winter-trail_map_001.pdf",
+
+        "lastUpdated": "2026-08-08T01:46:00"
+    },
+    {
+        "id": "16",
+        "name": "Bretton Woods",
+        "state": "NH",
+
+        "location": {
+            "latitude": 44.254832314,
+            "longitude": -71.437998248
+        },
+        "parkingLots": [],
+        "address": "99 Ski Area Rd, Bretton Woods, NH 03575",
+
+        "summit": 3100,
+        "verticalDrop": 1500,
+
+        "passes": [
+            {
+                "passName": "None"
+            }
+        ],
+
+        "trails": {
+            "bunny": 0,
+            "green": 23,
+            "blue": 27,
+            "black": 12,
+            "doubleBlack": 0,
+            "glades": 40,
+            "terrainParks": 0
+        },
+        "liftsOpenWeekdays": "9:00",
+        "liftsCloseWeekdays": "16:00",
+        "liftsOpenWeekends": "8:00",
+        "liftsCloseWeekends": "16:00",
+        "nightSkiing": false,
+
+        "pricing": {
+
+        },
+
+        "website": "https://www.brettonwoods.com/",
+        "trailMapPdf": "https://www.brettonwoods.com/content/uploads/2026/01/BW_AlpineTrailMap_2025-26.pdf",
+
+        "lastUpdated": "2026-08-08T01:53:00"
     }
 ]

@@ -14,6 +14,7 @@ export interface Mountain {
 
     verticalDrop: number; // vertifcal drop in feet (summit - base)
     summit: number; // in ft
+    baseElevation?: number // in ft
 
     passes: PassAccess[]; // passes that the mountain is on
 
