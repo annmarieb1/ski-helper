@@ -1,7 +1,14 @@
+import NavBar from "@/components/layout/NavBar";
+
 export default function Home() {
-  return (
-    <main className="min-h-screen p-8">
-      <h1 className="text-4xl font-bold">Ski Finder</h1>
-    </main>
-  );
+    return (
+        <>
+            <NavBar />
+            <main className="min-h-screen p-8">
+                <h1 className="mb-6 text-xl">
+                    Find Your Next Ski+Snowboard Trip
+                </h1>
+            </main>
+        </>
+    );
 }
