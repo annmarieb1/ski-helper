@@ -78,4 +78,5 @@ export interface Trails {
     black: number;
     doubleBlack: number; // this will encapsulate double black and anything above
     glades?: number; // all levels
+    terrainParks?: number;
 }

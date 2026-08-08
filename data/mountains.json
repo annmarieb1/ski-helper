@@ -860,5 +860,97 @@
         "trailMapPdf": "https://www.brettonwoods.com/content/uploads/2026/01/BW_AlpineTrailMap_2025-26.pdf",
 
         "lastUpdated": "2026-08-08T01:53:00"
+    },
+    {
+        "id": "17",
+        "name": "Gore",
+        "state": "NY",
+
+        "location": {
+            "latitude": 43.673497306,
+            "longitude": -74.048666472
+        },
+        "parkingLots": [],
+        "address": "793 Peaceful Valley Rd, North Creek, NY 12853",
+
+        "summit": 3600,
+        "verticalDrop": 2537,
+        "baseElevation": 1500,
+
+        "passes": [
+            {
+                "passName": "None"
+            }
+        ],
+
+        "trails": {
+            "bunny": 0,
+            "green": 11,
+            "blue": 53,
+            "black": 36,
+            "doubleBlack": 0,
+            "glades": 27,
+            "terrainParks": 6
+        },
+        "liftsOpenWeekdays": "8:30",
+        "liftsCloseWeekdays": "18:00",
+        "liftsOpenWeekends": "8:30",
+        "liftsCloseWeekends": "20:00",
+        "nightSkiing": true,
+
+        "pricing": {
+
+        },
+
+        "website": "https://goremountain.com/",
+        "trailMapPdf": "https://goremountain.com/wp-content/uploads/sites/4/2025/11/Trail-Map-Pocket-Map-2025_2026.pdf#page=2",
+
+        "lastUpdated": "2026-08-08T09:44:00"
+    },
+    {
+        "id": "18",
+        "name": "Hunter",
+        "state": "NY",
+
+        "location": {
+            "latitude": 42.173165974,
+            "longitude": -74.224832434
+        },
+        "parkingLots": [],
+        "address": "64 Klein Ave, Hunter, NY 12442",
+
+        "summit": 3200,
+        "verticalDrop": 1600,
+        "baseElevation": 1600,
+
+        "passes": [
+            {
+                "passName": ""
+            }
+        ],
+
+        "trails": {
+            "bunny": 3,
+            "green": 25,
+            "blue": 30,
+            "black": 36,
+            "doubleBlack": 9,
+            "glades": 3,
+            "terrainParks": 4
+        },
+        "liftsOpenWeekdays": "10:00",
+        "liftsCloseWeekdays": "16:00",
+        "liftsOpenWeekends": "10:00",
+        "liftsCloseWeekends": "16:00",
+        "nightSkiing": false,
+
+        "pricing": {
+
+        },
+
+        "website": "https://www.huntermtn.com/",
+        "trailMapPdf": "https://www.huntermtn.com/-/aemasset/sitecore/hunter/maps/winter-2025-2026/20251122_HU_winter-trail_map_001.pdf",
+
+        "lastUpdated": "2026-08-08T09:52:00"
     }
 ]
