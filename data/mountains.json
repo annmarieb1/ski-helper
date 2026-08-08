@@ -1,0 +1,627 @@
+[
+    {
+        "id": "0",
+        "name": "DUMMY MOUNTAIN",
+        "state": "US",
+
+        "location": {
+            "latitude": 0.0000,
+            "longitude": -1.0000
+        },
+        "parkingLots": [],
+        "address": "address",
+
+        "summit": 0,
+        "verticalDrop": 0,
+
+        "passes": [
+            { "passName": "None" }
+        ],
+
+        "trails": {
+            "bunny": 0,
+            "green": 0,
+            "blue": 0,
+            "black": 0,
+            "doubleBlack": 0,
+            "tripleBlack": 0
+        },
+        "liftsOpenWeekdays": "9:00",
+        "liftsCloseWeekdays": "16:00",
+        "liftsOpenWeekends": "8:00",
+        "liftsCloseWeekends": "20:00",
+        "nightSkiing": true,
+
+        "pricing": {
+
+        },
+
+        "website": "example.com",
+        "trailMapPdf": "",
+
+        "lastUpdated": "2026-08-07T11:48:00"
+    },
+    {
+        "id": "1",
+        "name": "Killington",
+        "state": "VT",
+
+        "location": {
+            "latitude": 43.64806,
+            "longitude": -72.79333
+        },
+        "parkingLots": [],
+        "address": "Killington, VT 05751",
+
+        "summit": 4241,
+        "verticalDrop": 3050,
+
+        "passes": [
+            {
+                "passName": "Ikon",
+                "passRestrictions": [
+                    {
+                        "passType": "Base",
+                        "restrictions": "5 days"
+                    },
+                    {
+                        "passType": "Full",
+                        "restrictions": "7 days"
+                    }
+                ]
+            }
+        ],
+
+        "trails": {
+            "bunny": 0,
+            "green": 0,
+            "blue": 0,
+            "black": 0,
+            "doubleBlack": 0,
+            "glades": 0
+        },
+        "liftsOpenWeekdays": "9:00",
+        "liftsCloseWeekdays": "16:00",
+        "liftsOpenWeekends": "8:00",
+        "liftsCloseWeekends": "16:00",
+        "nightSkiing": false,
+
+        "pricing": {
+
+        },
+
+        "website": "https://www.killington.com/",
+        "trailMapPdf": "https://killington.com/client_media/files/mountain_maps/Killington-Winter-Trail-Map-ForWeb-compressed.pdf",
+
+        "lastUpdated": "2026-08-07T11:48:00"
+    },
+    {
+        "id": "2",
+        "name": "Loon",
+        "state": "NH",
+
+        "location": {
+            "latitude": 44.03499986,
+            "longitude": -71.619664188
+        },
+        "parkingLots": [],
+        "address": "60 Loon Mountain Rd, Lincoln, NH 03251",
+
+        "summit": 3050,
+        "verticalDrop": 2190,
+
+        "passes": [
+            {
+                "passName": "Ikon",
+                "passRestrictions": [
+                    {
+                        "passType": "Base",
+                        "restrictions": "5 days"
+                    },
+                    {
+                        "passType": "Full",
+                        "restrictions": "7 days"
+                    }
+                ]
+            },
+            {
+                "passName": "Nitro",
+                "passRestrictions": [
+                    {
+                        "passType": "Limited",
+                        "restrictions": "no skiing on blackout dates"
+                    }
+                ]
+            }
+        ],
+
+        "trails": {
+            "bunny": 0,
+            "green": 0,
+            "blue": 0,
+            "black": 0,
+            "doubleBlack": 0,
+            "glades": 0
+        },
+        "liftsOpenWeekdays": "9:00",
+        "liftsCloseWeekdays": "16:00",
+        "liftsOpenWeekends": "8:00",
+        "liftsCloseWeekends": "16:00",
+        "nightSkiing": false,
+
+        "pricing": {
+
+        },
+
+        "website": "https://www.loonmtn.com/",
+        "trailMapPdf": "https://cdn.sanity.io/files/k8yfdmw9/loon/473c1b7e391eafb38eb18675d2427af1eca10f95.pdf",
+
+        "lastUpdated": "2026-08-07T11:56:00"
+    },
+    {
+        "id": "3",
+        "name": "Stratton",
+        "state": "VT",
+
+        "location": {
+            "latitude": 43.086166322,
+            "longitude": -72.925162966
+        },
+        "parkingLots": [],
+        "address": "Stratton, VT 05360",
+
+        "summit": 3875,
+        "verticalDrop": 2003,
+
+        "passes": [
+            {
+                "passName": "Ikon"
+            }
+        ],
+
+        "trails": {
+            "bunny": 4,
+            "green": 36,
+            "blue": 35,
+            "black": 16,
+            "doubleBlack": 9,
+            "glades": 0
+        },
+        "liftsOpenWeekdays": "9:00",
+        "liftsCloseWeekdays": "16:00",
+        "liftsOpenWeekends": "8:30",
+        "liftsCloseWeekends": "16:00",
+        "nightSkiing": false,
+
+        "pricing": {
+
+        },
+
+        "website": "https://www.stratton.com/",
+        "trailMapPdf": "https://www.stratton.com/-/media/stratton/pdfs/maps/251021_wintermap.pdf?rev=91319bc58d9f487994e44ab24664bea8",
+
+        "lastUpdated": "2026-08-07T12:04:00"
+    },
+    {
+        "id": "4",
+        "name": "Sugarbush",
+        "state": "VT",
+
+        "location": {
+            "latitude": 44.135666124,
+            "longitude": -72.903996384
+        },
+        "parkingLots": [],
+        "address": "62 Gate House Ln, Warren, VT 05674",
+
+        "summit": 4083,
+        "verticalDrop": 2600,
+
+        "passes": [
+            {
+                "passName": "Ikon"
+            }
+        ],
+
+        "trails": {
+            "bunny": 2,
+            "green": 24,
+            "blue": 47,
+            "black": 30,
+            "doubleBlack": 8,
+            "glades": 0
+        },
+        "liftsOpenWeekdays": "9:00",
+        "liftsCloseWeekdays": "16:00",
+        "liftsOpenWeekends": "9:00",
+        "liftsCloseWeekends": "16:00",
+        "nightSkiing": false,
+
+        "pricing": {
+
+        },
+
+        "website": "https://www.sugarbush.com/",
+
+        "lastUpdated": "2026-08-07T12:04:00"
+    },
+    {
+        "id": "5",
+        "name": "Sugarloaf",
+        "state": "ME",
+
+        "location": {
+            "latitude": 45.025499898,
+            "longitude": -70.307832102
+        },
+        "parkingLots": [],
+        "address": "5092 Sugarloaf Access Road Carrabassett Valley, Maine 04947",
+
+        "summit": 4237,
+        "verticalDrop": 2820,
+
+        "passes": [
+            {
+                "passName": "Ikon",
+                "passRestrictions": [
+                    {
+                        "passType": "Base",
+                        "restrictions": "5 days"
+                    },
+                    {
+                        "passType": "Full",
+                        "restrictions": "7 days"
+                    }
+                ]
+            },
+            {
+                "passName": "Nitro",
+                "passRestrictions": [
+                    {
+                        "passType": "Limited",
+                        "restrictions": "no skiing on blackout dates"
+                    }
+                ]
+            }
+        ],
+
+        "trails": {
+            "bunny": 0,
+            "green": 23,
+            "blue": 34,
+            "black": 43,
+            "doubleBlack": 0,
+            "glades": 0
+        },
+        "liftsOpenWeekdays": "9:00",
+        "liftsCloseWeekdays": "16:00",
+        "liftsOpenWeekends": "8:00",
+        "liftsCloseWeekends": "16:00",
+        "nightSkiing": false,
+
+        "pricing": {
+
+        },
+
+        "website": "https://www.sugarloaf.com/",
+        "trailMapPdf": "https://cdn.sanity.io/files/k8yfdmw9/sugarloaf/dfcf8f514a7b5fd6c62814f5939fd7b6ea9d24c1.pdf",
+
+        "lastUpdated": "2026-08-07T12:14:00"
+    },
+    {
+        "id": "6",
+        "name": "Sunday River",
+        "state": "ME",
+
+        "location": {
+            "latitude": 44.46833146,
+            "longitude": -70.85666324
+        },
+        "parkingLots": [],
+        "address": "15 S Ridge Rd, Newry, ME 04261",
+
+        "summit": 3150,
+        "verticalDrop": 2340,
+
+        "passes": [
+            {
+                "passName": "Ikon",
+                "passRestrictions": [
+                    {
+                        "passType": "Base",
+                        "restrictions": "5 days"
+                    },
+                    {
+                        "passType": "Full",
+                        "restrictions": "7 days"
+                    }
+                ]
+            },
+            {
+                "passName": "Nitro",
+                "passRestrictions": [
+                    {
+                        "passType": "Limited",
+                        "restrictions": "no skiing on blackout dates"
+                    }
+                ]
+            }
+        ],
+
+        "trails": {
+            "bunny": 0,
+            "green": 0,
+            "blue": 0,
+            "black": 0,
+            "doubleBlack": 0,
+            "glades": 0
+        },
+        "liftsOpenWeekdays": "9:00",
+        "liftsCloseWeekdays": "16:00",
+        "liftsOpenWeekends": "8:00",
+        "liftsCloseWeekends": "18:00",
+        "nightSkiing": true,
+
+        "pricing": {
+
+        },
+
+        "website": "https://www.sundayriver.com/",
+        "trailMapPdf": "https://cdn.sanity.io/files/k8yfdmw9/sunday-river/78ea8affe8a94b5bcd3257e17f6f17db4adca4eb.pdf",
+
+        "lastUpdated": "2026-08-07T12:18:00"
+    },
+    {
+        "id": "7",
+        "name": "Mont-Tremblant",
+        "state": "Quebec, Canada",
+
+        "location": {
+            "latitude": 46.21274,
+            "longitude": -74.58438
+        },
+        "parkingLots": [],
+        "address": "Mont-Tremblant, QC J8E 1E1, Canada",
+
+        "summit": 2871,
+        "verticalDrop": 2116,
+
+        "passes": [
+            {
+                "passName": "Ikon"
+            }
+        ],
+
+        "trails": {
+            "bunny": 0,
+            "green": 22,
+            "blue": 31,
+            "black": 38,
+            "doubleBlack": 11,
+            "glades": 0
+        },
+        "liftsOpenWeekdays": "9:00",
+        "liftsCloseWeekdays": "16:00",
+        "liftsOpenWeekends": "8:00",
+        "liftsCloseWeekends": "15:30",
+        "nightSkiing": false,
+
+        "pricing": {
+
+        },
+
+        "website": "https://www.tremblant.ca/",
+        "trailMapPdf": "https://medias.tremblant.ca/pdf/cartes/carte-pistes-tremblant.pdf",
+
+        "lastUpdated": "2026-08-07T12:26:00"
+    },
+    {
+        "id": "8",
+        "name": "Jay Peak",
+        "state": "VT",
+
+        "location": {
+            "latitude": 44.92416297,
+            "longitude": -72.525664564
+        },
+        "parkingLots": [],
+        "address": "1144 Access Road, Jay, VT 05859",
+
+        "summit": 3862,
+        "verticalDrop": 2112,
+
+        "passes": [
+            {
+                "passName": "Indy"
+            }
+        ],
+
+        "trails": {
+            "bunny": 2,
+            "green": 18,
+            "blue": 40,
+            "black": 40,
+            "doubleBlack": 0,
+            "glades": 0
+        },
+        "liftsOpenWeekdays": "9:00",
+        "liftsCloseWeekdays": "16:00",
+        "liftsOpenWeekends": "8:00",
+        "liftsCloseWeekends": "16:00",
+        "nightSkiing": false,
+
+        "pricing": {
+
+        },
+
+        "website": "https://jaypeakresort.com/",
+        "trailMapPdf": "https://jaypeakresort.com/sites/default/files/2026-02/JPR_TrailMap_Winter_2025%2B2026_ToPRINT.pdf",
+
+        "lastUpdated": "2026-08-07T13:13:00"
+    },
+    {
+        "id": "9",
+        "name": "Okemo",
+        "state": "VT",
+
+        "location": {
+            "latitude": 43.40083173,
+            "longitude": -72.7166638
+        },
+        "parkingLots": [],
+        "address": "Clock Tower Base Area 77 Okemo Ridge Road, Ludlow, VT 05149",
+
+        "summit": 3344,
+        "verticalDrop": 2200,
+
+        "passes": [
+            {
+                "passName": "Epic",
+                "passRestrictions": [
+                    {
+                        "passType": "Day",
+                        "restrictions": "1-7 total days"
+                    },
+                    {
+                        "passType": "Northeast Value",
+                        "restrictions": "10 total days"
+                    },
+                    {
+                        "passType": "Northeast Midweek",
+                        "restrictions": "Weekday access, excludes peak dates"
+                    }
+                ]
+            }
+        ],
+
+        "trails": {
+            "bunny": 3,
+            "green": 30,
+            "blue": 37,
+            "black": 30,
+            "doubleBlack": 0,
+            "glades": 0
+        },
+        "liftsOpenWeekdays": "9:00",
+        "liftsCloseWeekdays": "16:00",
+        "liftsOpenWeekends": "8:00",
+        "liftsCloseWeekends": "16:00",
+        "nightSkiing": false,
+
+        "pricing": {
+
+        },
+
+        "website": "https://www.okemo.com/",
+        "trailMapPdf": "",
+
+        "lastUpdated": "2026-08-07T13:13:00"
+    },
+    {
+        "id": "10",
+        "name": "Stowe",
+        "state": "VT",
+
+        "location": {
+            "latitude": 44.52583123,
+            "longitude": -72.78583019
+        },
+        "parkingLots": [],
+        "address": "5781 Mountain Rd, Stowe, VT 05672",
+
+        "summit": 3625,
+        "verticalDrop": 2360,
+
+        "passes": [
+            {
+                "passName": "Epic",
+                "passRestrictions": [
+                    {
+                        "passType": "Local",
+                        "restrictions": "No access on peak dates"
+                    },
+                    
+                    {
+                        "passType": "Day",
+                        "restrictions": "1-7 total days"
+                    },
+                    {
+                        "passType": "Northeast Value",
+                        "restrictions": "10 total days"
+                    },
+                    {
+                        "passType": "Northeast Midweek",
+                        "restrictions": "Weekday access, excludes peak dates"
+                    }
+                ]
+            }
+        ],
+
+        "trails": {
+            "bunny": 2,
+            "green": 14,
+            "blue": 55,
+            "black": 16,
+            "doubleBlack": 13,
+            "glades": 0
+        },
+        "liftsOpenWeekdays": "9:00",
+        "liftsCloseWeekdays": "16:00",
+        "liftsOpenWeekends": "8:00",
+        "liftsCloseWeekends": "16:00",
+        "nightSkiing": false,
+
+        "pricing": {
+
+        },
+
+        "website": "https://www.stowe.com/",
+        "trailMapPdf": "https://www.stowe.com/-/aemasset/sitecore/stowe/maps/winter-2025-2026/20251014_ST_winter-trail_map_001.pdf",
+
+        "lastUpdated": "2026-08-07T14:54:00"
+    },
+    {
+        "id": "11",
+        "name": "Waterville",
+        "state": "NH",
+
+        "location": {
+            "latitude": 43.95916283,
+            "longitude": -71.52333124
+        },
+        "parkingLots": [],
+        "address": "1 Ski Area Rd, Waterville Valley, NH 03215",
+
+        "summit": 4004,
+        "verticalDrop": 2020,
+
+        "passes": [
+            {
+                "passName": "Indy"
+            }
+        ],
+
+        "trails": {
+            "bunny": 1,
+            "green": 14,
+            "blue": 59,
+            "black": 23,
+            "doubleBlack": 3,
+            "glades": 5
+        },
+        "liftsOpenWeekdays": "9:00",
+        "liftsCloseWeekdays": "16:00",
+        "liftsOpenWeekends": "8:00",
+        "liftsCloseWeekends": "20:00",
+        "nightSkiing": true,
+
+        "pricing": {
+
+        },
+
+        "website": "https://www.waterville.com/",
+        "trailMapPdf": "https://static1.squarespace.com/static/62503704223b711a550b3e6f/t/6917892081bdec22f24afe40/1763150112862/Alpine+Trail+Map+With+Night+Ski_Brochure+Front_2526.jpg",
+
+        "lastUpdated": "2026-08-07T15:12:00"
+    }
+]
