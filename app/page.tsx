@@ -1,4 +1,13 @@
+"use client";
+
+import type { Mountain } from "@/types/MountainType";
+
 import NavBar from "@/components/layout/NavBar";
+import MountainTable from "@/components/mountain/MountainTable";
+
+import { getMountains } from "@/services/mountainService";
+
+const mountains: Mountain[] = await getMountains();
 
 export default function Home() {
     return (
@@ -8,6 +17,8 @@ export default function Home() {
                 <h1 className="mb-6 text-xl">
                     Find Your Next Ski+Snowboard Trip
                 </h1>
+
+                <MountainTable mountains={mountains} />
             </main>
         </>
     );
