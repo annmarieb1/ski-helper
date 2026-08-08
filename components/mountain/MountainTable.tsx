@@ -19,7 +19,7 @@ function renderPassAccess(passName: string) {
   } else if (passName === "Indy") {
     return <p key={passName} className='rounded-lg bg-red-500'>{passName}</p>
   } else if (passName === "Ikon") {
-    return <p key={passName} className='rounded-lg bg-blue-800/85'>{passName}</p>
+    return <p key={passName} className='rounded-lg bg-blue-500/95'>{passName}</p>
   } else if (passName === "Nitro") {
     return <p key={passName} className='rounded-lg bg-yellow-300'>{passName}</p>
   } else {
@@ -31,7 +31,7 @@ export default function MountainTable({
   mountains,
 }: MountainTableProps) {
   return (
-    <div className="overflow-x-auto rounded-lg border">
+    <div className="overflow-x-auto rounded-lg border my-3">
       <table className="min-w-full">
         <thead className="bg-gray-100">
           <tr>
@@ -48,7 +48,7 @@ export default function MountainTable({
           {mountains.map((mountain) => (
             <tr
               key={mountain.id}
-              className="border-t hover:bg-gray-50"
+              className="border-t-2 hover:bg-gray-50"
             >
               {/* Mountain/resort */}
               <td className="px-4 py-3 font-medium">
@@ -71,13 +71,13 @@ export default function MountainTable({
               </td>
 
               {/* Pass access */}
-              <td className="px-4 py-3 text-right">
+              <td className="px-4 py-3 text-center">
                 {mountain.passes.map(mp => { return renderPassAccess(mp.passName) }
                 )}
               </td>
 
               {/* Drive time */}
-              <td className="px-4 py-3 text-right">
+              <td className="px-4 py-3 text-center">
                 Drive time
               </td>
             </tr>
