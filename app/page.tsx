@@ -4,6 +4,7 @@ import type { Mountain } from "@/types/MountainTypes";
 import type { Pass } from "@/types/PassesType";
 
 import NavBar from "@/components/layout/NavBar";
+import Footer from "@/components/layout/Footer";
 import FilterBar from "@/components/filters/FilterBar";
 import MountainTable from "@/components/mountain/MountainTable";
 
@@ -25,6 +26,7 @@ export default function Home() {
                 <FilterBar passes={passes}/>
                 <MountainTable mountains={mountains} />
             </main>
+            <Footer />
         </>
     );
 }
