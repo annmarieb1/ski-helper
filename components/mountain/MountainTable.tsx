@@ -2,7 +2,7 @@
  * Table to display mountain data
  */
 
-import type { Mountain } from "@/types/MountainType";
+import type { Mountain } from "@/types/MountainTypes";
 
 import Difficulties from "@/components/filters/DifficultyFilter";
 

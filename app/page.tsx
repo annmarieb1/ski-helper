@@ -1,6 +1,6 @@
 "use client";
 
-import type { Mountain } from "@/types/MountainType";
+import type { Mountain } from "@/types/MountainTypes";
 
 import NavBar from "@/components/layout/NavBar";
 import MountainTable from "@/components/mountain/MountainTable";

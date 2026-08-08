@@ -2,7 +2,7 @@
  * All services for mountain data from APIs
  */
 
-import type { Mountain } from "@/types/MountainType";
+import type { Mountain } from "@/types/MountainTypes";
 
 import mountains from "@/data/mountains.json";
 
