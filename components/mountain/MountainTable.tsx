@@ -1,4 +1,5 @@
 /*
+ * MountainTable.tsx
  * Table to display mountain data
  */
 
@@ -11,8 +12,8 @@ interface MountainTableProps {
 }
 
 /*
- * some color coding for pass access
- */
+* color coding for pass access col
+*/
 function renderPassAccess(passName: string) {
   if (passName === "Epic") {
     return <p key={passName} className='rounded-lg bg-orange-400'>{passName}</p>
@@ -28,19 +29,22 @@ function renderPassAccess(passName: string) {
 }
 
 export default function MountainTable({
-  mountains,
+    mountains,
 }: MountainTableProps) {
   return (
     <div className="overflow-x-auto rounded-lg border my-3">
       <table className="min-w-full">
         <thead className="bg-gray-100">
           <tr>
-            <th className="px-4 py-3 text-left">Mountain/Resort</th>
-            <th className="px-4 py-3 text-left">State/Location</th>
-            <th className="px-4 py-3 text-left">Trail Difficulty Distribution</th>
-            <th className="px-4 py-3 text-left">Adult Lift Ticket Price</th>
-            <th className="px-4 py-3 text-left">Pass Access</th>
-            <th className="px-4 py-3 text-right">Drive Time</th>
+            <th className="px-2 py-3 text-left">Mountain/Resort</th>
+            <th className="px-2 py-3 text-left">State/Location</th>
+            {/* <th className="px-2 py-3 text-right">Drive Time</th> */}
+            <th className="px-2 py-3 text-left">Trail Difficulty Distribution</th>
+            <th className="px-2 py-3 text-left">Vertical Drop (ft)</th>
+            <th className="px-2 py-3 text-left">Estimated Adult Lift Ticket Price</th>
+            <th className="px-2 py-3 text-left">Pass Access</th>
+            <th className="px-2 py-3 text-left">Snowfall</th>
+            <th className="px-2 py-3 text-left">OpenWeather</th>
           </tr>
         </thead>
 
@@ -51,34 +55,54 @@ export default function MountainTable({
               className="border-t-2 hover:bg-gray-50"
             >
               {/* Mountain/resort */}
-              <td className="px-4 py-3 font-medium">
+              <td className="px-2 py-3 font-medium">
                 {mountain.name}
               </td>
 
               {/* Location */}
-              <td className="px-4 py-3">
+              <td className="px-2 py-3">
                 {mountain.state}
               </td>
 
               {/* Trail difficulty */}
-              <td className="px-4 py-3">
+              <td className="px-2 py-3">
                 <DifficultyBar trails={mountain.trails} />
               </td>
 
+              {/* Vertical Drop */}
+              <td className="px-2 py-3 text-center">
+                {mountain.verticalDrop}
+              </td>
+
               {/* Adult Lift Ticket Price */}
-              <td className="px-4 py-3">
-                Lift ticket price range
+              <td className="px-2 py-3">
+                {Object.keys(mountain.pricing).length !== 0
+                ? 
+                  (
+                    <div>
+                      <p>Weekday estimate: ${mountain.pricing.liftTicketWeekday}</p>
+                      <p>Weekend estimate: ${mountain.pricing.liftTicketWeekend}</p>
+                    </div>
+                  )
+                :
+                  (<p>No lift ticket estimates available</p>)
+                }
               </td>
 
               {/* Pass access */}
-              <td className="px-4 py-3 text-center">
+              <td className="px-2 py-3 text-center">
                 {mountain.passes.map(mp => { return renderPassAccess(mp.passName) }
                 )}
               </td>
 
-              {/* Drive time */}
-              <td className="px-4 py-3 text-center">
-                Drive time
+              {/* Snowfall */}
+              <td className="px-2 py-3 text-center">
+                {<p>Snowfall</p>}
+              </td>
+
+              {/* Open Weather */}
+              <td className="px-2 py-3 text-center">
+                {<p>Open Weather</p>}
               </td>
             </tr>
           ))}
