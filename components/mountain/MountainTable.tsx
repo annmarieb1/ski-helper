@@ -8,9 +8,14 @@
 import {
   useTable,
   tableFeatures,
-  FlexRender
+  FlexRender,
+  createSortedRowModel,
+  rowSortingFeature,
+  sortFn_alphanumeric,
+  sortFn_text,
 } from '@tanstack/react-table';
 import type { ColumnDef } from '@tanstack/react-table';
+import { ArrowUpDown, ArrowUp, ArrowDown } from "lucide-react";
 
 import type {
   Mountain,
@@ -61,19 +66,29 @@ const renderLiftTicketPrices = (pricing: PriceInterface) => {
   );
 }
 
-const features = tableFeatures({});
+const features = tableFeatures({
+  rowSortingFeature, // enables sorting APIs and state
+  sortedRowModel: createSortedRowModel(), // client-side sorting
+  sortFns: {
+    alphanumeric: sortFn_alphanumeric,
+    text: sortFn_text,
+  },
+});
 
 const columns: Array<ColumnDef<typeof features, Mountain>> = [
   {
     accessorKey: 'name',
     header: 'Mountain/Resort',
+    sortFn: "alphanumeric",
   },
   {
     accessorKey: 'state',
     header: 'State/Location',
+    sortFn: "text",
   },
   //   header: 'Drive Time',
   //   cell: () => "-Drive time",
+  //   sortFn: "basic",
   // },
   {
     accessorKey: 'trails',
@@ -83,11 +98,13 @@ const columns: Array<ColumnDef<typeof features, Mountain>> = [
       return (
         <DifficultyBar trails={mountain.trails} />
       );
-    }
+    },
+    enableSorting: false, // TODO: custom
   },
   {
     accessorKey: 'verticalDrop',
     header: 'Vertical Drop (ft)',
+    // sortFn: "basic", // should infer
   },
   {
     accessorKey: 'pricing',
@@ -95,7 +112,8 @@ const columns: Array<ColumnDef<typeof features, Mountain>> = [
     cell: (info) => {
       const mountain = info.row.original;
       return renderLiftTicketPrices(mountain.pricing);
-    }
+    },
+    enableSorting: false, // for now. TODO: write custom func
   },
   {
     accessorKey: 'passes',
@@ -109,7 +127,8 @@ const columns: Array<ColumnDef<typeof features, Mountain>> = [
           )}
         </div>
       );
-    }
+    },
+    enableSorting: false, // want to get first pass alphabetically in list of passes?
   },
   // {
   //   accessorKey: 'snowfall',
@@ -143,7 +162,31 @@ export default function MountainTable({
                   {header.isPlaceholder
                     ? null
                     : (
-                    <FlexRender header={header} />
+                      <div
+                        style={{
+                          cursor: header.column.getCanSort()
+                            ? 'pointer'
+                            : undefined,
+                        }}
+                        onClick={header.column.getToggleSortingHandler()}
+                      >
+                        <FlexRender header={header} />
+                        {header.column.getCanSort() && (
+                          <>
+                            {header.column.getIsSorted() === "asc" && (
+                              <ArrowUp className="h-4 w-4" />
+                            )}
+
+                            {header.column.getIsSorted() === "desc" && (
+                              <ArrowDown className="h-4 w-4" />
+                            )}
+
+                            {header.column.getIsSorted() === false && (
+                              <ArrowUpDown className="h-4 w-4" />
+                            )}
+                          </>
+                        )}
+                      </div>
                   )}
                 </th>
               ))}
