@@ -1,47 +1,5 @@
 [
     {
-        "id": "0",
-        "name": "DUMMY MOUNTAIN",
-        "state": "US",
-
-        "location": {
-            "latitude": 0.0000,
-            "longitude": -1.0000
-        },
-        "parkingLots": [],
-        "address": "address",
-
-        "summit": 0,
-        "verticalDrop": 0,
-
-        "passes": [
-            
-        ],
-
-        "trails": {
-            "bunny": 0,
-            "green": 0,
-            "blue": 0,
-            "black": 0,
-            "doubleBlack": 0,
-            "tripleBlack": 0
-        },
-        "liftsOpenWeekdays": "9:00",
-        "liftsCloseWeekdays": "16:00",
-        "liftsOpenWeekends": "8:00",
-        "liftsCloseWeekends": "20:00",
-        "nightSkiing": true,
-
-        "pricing": {
-
-        },
-
-        "website": "example.com",
-        "trailMapPdf": "",
-
-        "lastUpdated": "2026-08-07T11:48:00"
-    },
-    {
         "id": "1",
         "name": "Killington",
         "state": "VT",
