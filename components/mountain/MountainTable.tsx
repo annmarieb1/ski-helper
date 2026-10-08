@@ -118,7 +118,8 @@ const columns: Array<ColumnDef<typeof features, Mountain>> = [
   {
     accessorKey: 'verticalDrop',
     header: 'Vertical Drop (ft)',
-    // sortFn: "basic", // should infer
+    // sortFn: "basic",
+    sortDescFirst: false,
   },
   {
     accessorKey: 'pricing',
@@ -149,7 +150,24 @@ const columns: Array<ColumnDef<typeof features, Mountain>> = [
         </div>
       );
     },
-    enableSorting: false, // want to get first pass alphabetically in list of passes?
+    sortFn: (rowA, rowB) => {
+      const optionsA = rowA.original.passes
+        .map(pass => pass.passName)
+        .sort();
+      const optionsB = rowB.original.passes
+        .map(pass => pass.passName)
+        .sort();
+
+      const passA = optionsA[0];
+      const passB = optionsB[0];
+
+      if (passA === undefined && passB === undefined) return 0;
+      if (passA === undefined) return 1;
+      if (passB === undefined) return -1;
+
+      return passA.localeCompare(passB);
+    },
+    sortDescFirst: false,
   },
   // {
   //   accessorKey: 'snowfall',
