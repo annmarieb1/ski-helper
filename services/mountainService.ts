@@ -8,7 +8,7 @@ import mountains from "@/data/mountains.json";
 
 // Get all mountains
 export async function getMountains(): Promise<Mountain[]> {
-    return mountains;
+  return mountains;
 }
 
 // For when the backend is separate from frontend

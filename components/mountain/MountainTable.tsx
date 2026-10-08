@@ -13,14 +13,11 @@ import {
   rowSortingFeature,
   sortFn_alphanumeric,
   sortFn_text,
-} from '@tanstack/react-table';
-import type { ColumnDef } from '@tanstack/react-table';
+} from "@tanstack/react-table";
+import type { ColumnDef } from "@tanstack/react-table";
 import { ArrowUpDown, ArrowUp, ArrowDown } from "lucide-react";
 
-import type {
-  Mountain,
-  PriceInterface,
-} from "@/types/MountainTypes";
+import type { Mountain, PriceInterface } from "@/types/MountainTypes";
 
 import DifficultyBar from "@/components/mountain/DifficultyBar";
 
@@ -29,25 +26,47 @@ interface MountainTableProps {
 }
 
 /*
-* color coding for pass access col
-*/
+ * color coding for pass access col
+ */
 const renderPassAccess = (passName: string) => {
-  const baseClass =
-    "inline-flex items-center rounded-full px-2 py-0.5 my-0.5 ";
+  const baseClass = "inline-flex items-center rounded-full px-2 py-0.5 my-0.5 ";
 
   if (passName === "Epic") {
-    return <p key={passName} className={`${baseClass} bg-orange-400`}>{passName}</p>
+    return (
+      <p key={passName} className={`${baseClass} bg-orange-400`}>
+        {passName}
+      </p>
+    );
   } else if (passName === "Indy") {
-    return <p key={passName} className={`${baseClass} bg-red-500`}>{passName}</p>
+    return (
+      <p key={passName} className={`${baseClass} bg-red-500`}>
+        {passName}
+      </p>
+    );
   } else if (passName === "Ikon") {
-    return <p key={passName} className={`${baseClass} bg-blue-500/95`}>{passName}</p>
+    return (
+      <p key={passName} className={`${baseClass} bg-blue-500/95`}>
+        {passName}
+      </p>
+    );
   } else if (passName === "Nitro") {
-    return <p key={passName} className={`${baseClass} bg-yellow-300`}>{passName}</p>
+    return (
+      <p key={passName} className={`${baseClass} bg-yellow-300`}>
+        {passName}
+      </p>
+    );
   } else {
-    return <p key={passName} className={`${baseClass} bg-gray-300`}>{passName}</p>
+    return (
+      <p key={passName} className={`${baseClass} bg-gray-300`}>
+        {passName}
+      </p>
+    );
   }
-}
+};
 
+/*
+ * lift ticket prices
+ */
 const renderLiftTicketPrices = (pricing: PriceInterface) => {
   if (
     pricing.liftTicketWeekday === undefined &&
@@ -67,7 +86,7 @@ const renderLiftTicketPrices = (pricing: PriceInterface) => {
       )}
     </div>
   );
-}
+};
 
 const features = tableFeatures({
   rowSortingFeature, // enables sorting APIs and state
@@ -89,14 +108,14 @@ const getLowestLiftTicketPrice = (prices: PriceInterface) => {
 
 const columns: Array<ColumnDef<typeof features, Mountain>> = [
   {
-    accessorKey: 'name',
-    header: 'Mountain/Resort',
+    accessorKey: "name",
+    header: "Mountain/Resort",
     sortFn: "alphanumeric",
     sortDescFirst: false,
   },
   {
-    accessorKey: 'state',
-    header: 'State/Location',
+    accessorKey: "state",
+    header: "State/Location",
     sortFn: "text",
     sortDescFirst: false,
   },
@@ -105,25 +124,23 @@ const columns: Array<ColumnDef<typeof features, Mountain>> = [
   //   sortFn: "basic",
   // },
   {
-    accessorKey: 'trails',
-    header: 'Trail Difficulty Distribution',
+    accessorKey: "trails",
+    header: "Trail Difficulty Distribution",
     cell: (info) => {
       const mountain = info.row.original;
-      return (
-        <DifficultyBar trails={mountain.trails} />
-      );
+      return <DifficultyBar trails={mountain.trails} />;
     },
     enableSorting: false,
   },
   {
-    accessorKey: 'verticalDrop',
-    header: 'Vertical Drop (ft)',
+    accessorKey: "verticalDrop",
+    header: "Vertical Drop (ft)",
     // sortFn: "basic",
     sortDescFirst: false,
   },
   {
-    accessorKey: 'pricing',
-    header: 'Estimated Adult Lift Ticket Price (avg, in USD)',
+    accessorKey: "pricing",
+    header: "Estimated Adult Lift Ticket Price (avg, in USD)",
     cell: (info) => {
       const mountain = info.row.original;
       return renderLiftTicketPrices(mountain.pricing);
@@ -138,25 +155,19 @@ const columns: Array<ColumnDef<typeof features, Mountain>> = [
     sortDescFirst: false,
   },
   {
-    accessorKey: 'passes',
-    header: 'Pass Access',
+    accessorKey: "passes",
+    header: "Pass Access",
     cell: (info) => {
       const mountain = info.row.original;
       return (
         <div className="flex flex-wrap gap-1">
-          {mountain.passes.map((pass) =>
-            renderPassAccess(pass.passName)
-          )}
+          {mountain.passes.map((pass) => renderPassAccess(pass.passName))}
         </div>
       );
     },
     sortFn: (rowA, rowB) => {
-      const optionsA = rowA.original.passes
-        .map(pass => pass.passName)
-        .sort();
-      const optionsB = rowB.original.passes
-        .map(pass => pass.passName)
-        .sort();
+      const optionsA = rowA.original.passes.map((pass) => pass.passName).sort();
+      const optionsB = rowB.original.passes.map((pass) => pass.passName).sort();
 
       const passA = optionsA[0];
       const passB = optionsB[0];
@@ -179,17 +190,15 @@ const columns: Array<ColumnDef<typeof features, Mountain>> = [
   //   header: 'OpenWeather',
   //   cell: () => "-Weather",
   // },
-]
+];
 
-export default function MountainTable({
-    mountains,
-}: MountainTableProps) {
+export default function MountainTable({ mountains }: MountainTableProps) {
   const table = useTable({
-    key: 'mountains-table', // needed for devtools
+    key: "mountains-table", // needed for devtools
     features,
     columns,
-    data: mountains
-  })
+    data: mountains,
+  });
   return (
     <div className="overflow-x-auto rounded-lg border my-3">
       <table className="min-w-full">
@@ -198,35 +207,33 @@ export default function MountainTable({
             <tr key={headerGroup.id}>
               {headerGroup.headers.map((header) => (
                 <th key={header.id}>
-                  {header.isPlaceholder
-                    ? null
-                    : (
-                      <div
-                        className="flex items-center justify-center gap-1"
-                        style={{
-                          cursor: header.column.getCanSort()
-                            ? 'pointer'
-                            : undefined,
-                        }}
-                        onClick={header.column.getToggleSortingHandler()}
-                      >
-                        <FlexRender header={header} />
-                        {header.column.getCanSort() && (
-                          <>
-                            {header.column.getIsSorted() === "asc" && (
-                              <ArrowUp className="h-4 w-4 shrink-0" /> // use shrink so the icon doesn't get squeezed if header wraps
-                            )}
+                  {header.isPlaceholder ? null : (
+                    <div
+                      className="flex items-center justify-center gap-1"
+                      style={{
+                        cursor: header.column.getCanSort()
+                          ? "pointer"
+                          : undefined,
+                      }}
+                      onClick={header.column.getToggleSortingHandler()}
+                    >
+                      <FlexRender header={header} />
+                      {header.column.getCanSort() && (
+                        <>
+                          {header.column.getIsSorted() === "asc" && (
+                            <ArrowUp className="h-4 w-4 shrink-0" /> // use shrink so the icon doesn't get squeezed if header wraps
+                          )}
 
-                            {header.column.getIsSorted() === "desc" && (
-                              <ArrowDown className="h-4 w-4 shrink-0" />
-                            )}
+                          {header.column.getIsSorted() === "desc" && (
+                            <ArrowDown className="h-4 w-4 shrink-0" />
+                          )}
 
-                            {header.column.getIsSorted() === false && (
-                              <ArrowUpDown className="h-4 w-4 shrink-0" />
-                            )}
-                          </>
-                        )}
-                      </div>
+                          {header.column.getIsSorted() === false && (
+                            <ArrowUpDown className="h-4 w-4 shrink-0" />
+                          )}
+                        </>
+                      )}
+                    </div>
                   )}
                 </th>
               ))}
