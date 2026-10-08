@@ -1,4 +1,7 @@
-/* Define types related to mountain data */
+/* 
+ * MountainTypes.ts
+ * Define types related to mountain data
+ */
 
 /*
  * Type interface for singular mountain
@@ -25,14 +28,7 @@ export interface Mountain {
     liftsCloseWeekends: string;
     nightSkiing?: boolean;
 
-    pricing: { // these are all averages, in USD
-        liftTicketWeekday?: number;
-        liftTicketWeekend?: number;
-        rentalWeekday?: number;
-        rentalWeekend?: number;
-        lessonWeekday?: number;
-        lessonWeekend?: number;
-    };
+    pricing: PriceInterface;
 
     website: string;
     trailMapPdf?: string; // URL to trailmap pdf
@@ -48,12 +44,21 @@ interface Coordinates {
     longitude: number;
 }
 
+export interface PriceInterface {
+    liftTicketWeekday?: number;
+    liftTicketWeekend?: number;
+    rentalWeekday?: number;
+    rentalWeekend?: number;
+    lessonWeekday?: number;
+    lessonWeekend?: number;
+};
+
 /* 
  * Type interface for ski resort pass access
  * passName         - string representing pass name, for example "Ikon"
  * passRestrictions - restrictions of the pass
  */
-interface PassAccess {
+export interface PassAccess {
     passName: string;
     passRestrictions?: PassRestrictions[];
 }
@@ -63,7 +68,7 @@ interface PassAccess {
  * passType     - string representing type of pass, for example "Base" would be for "Ikon Base Pass"
  * restrictions - string representing what the restriction is, for example "no blackout dates"
  */
-interface PassRestrictions {
+export interface PassRestrictions {
     passType: string;
     restrictions: string;
 }
