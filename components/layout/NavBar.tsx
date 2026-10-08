@@ -24,6 +24,13 @@ export default function NavBar() {
           >
             Home
           </Link>
+
+          <Link
+            href="/about"
+            className="text-sm font-medium hover:text-blue-600"
+          >
+            About
+          </Link>
         </div>
       </nav>
     </header>
