@@ -32,16 +32,19 @@ interface MountainTableProps {
 * color coding for pass access col
 */
 const renderPassAccess = (passName: string) => {
+  const baseClass =
+    "inline-flex items-center rounded-full px-2 py-0.5 my-0.5 ";
+
   if (passName === "Epic") {
-    return <p key={passName} className='rounded-lg bg-orange-400'>{passName}</p>
+    return <p key={passName} className={`${baseClass} bg-orange-400`}>{passName}</p>
   } else if (passName === "Indy") {
-    return <p key={passName} className='rounded-lg bg-red-500'>{passName}</p>
+    return <p key={passName} className={`${baseClass} bg-red-500`}>{passName}</p>
   } else if (passName === "Ikon") {
-    return <p key={passName} className='rounded-lg bg-blue-500/95'>{passName}</p>
+    return <p key={passName} className={`${baseClass} bg-blue-500/95`}>{passName}</p>
   } else if (passName === "Nitro") {
-    return <p key={passName} className='rounded-lg bg-yellow-300'>{passName}</p>
+    return <p key={passName} className={`${baseClass} bg-yellow-300`}>{passName}</p>
   } else {
-    return <p key={passName} className='rounded-lg bg-gray-300'>{passName}</p>
+    return <p key={passName} className={`${baseClass} bg-gray-300`}>{passName}</p>
   }
 }
 
@@ -56,11 +59,11 @@ const renderLiftTicketPrices = (pricing: PriceInterface) => {
   return (
     <div>
       {pricing.liftTicketWeekday !== undefined && (
-        <p>Weekday estimate: ${pricing.liftTicketWeekday}</p>
+        <p className="my-0.5">Weekday estimate: ${pricing.liftTicketWeekday}</p>
       )}
 
       {pricing.liftTicketWeekend !== undefined && (
-        <p>Weekend estimate: ${pricing.liftTicketWeekend}</p>
+        <p className="my-0.5">Weekend estimate: ${pricing.liftTicketWeekend}</p>
       )}
     </div>
   );
@@ -163,6 +166,7 @@ export default function MountainTable({
                     ? null
                     : (
                       <div
+                        className="flex items-center justify-center gap-1"
                         style={{
                           cursor: header.column.getCanSort()
                             ? 'pointer'
@@ -174,15 +178,15 @@ export default function MountainTable({
                         {header.column.getCanSort() && (
                           <>
                             {header.column.getIsSorted() === "asc" && (
-                              <ArrowUp className="h-4 w-4" />
+                              <ArrowUp className="h-4 w-4 shrink-0" /> // use shrink so the icon doesn't get squeezed if header wraps
                             )}
 
                             {header.column.getIsSorted() === "desc" && (
-                              <ArrowDown className="h-4 w-4" />
+                              <ArrowDown className="h-4 w-4 shrink-0" />
                             )}
 
                             {header.column.getIsSorted() === false && (
-                              <ArrowUpDown className="h-4 w-4" />
+                              <ArrowUpDown className="h-4 w-4 shrink-0" />
                             )}
                           </>
                         )}
@@ -194,7 +198,7 @@ export default function MountainTable({
           ))}
         </thead>
 
-        <tbody>
+        <tbody className="divide-y divide-gray-200">
           {table.getRowModel().rows.map((row) => (
             <tr key={row.id}>
               {row.getAllCells().map((cell) => (
