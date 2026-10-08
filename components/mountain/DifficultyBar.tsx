@@ -1,4 +1,5 @@
 /*
+ * DifficultyBar.tsx
  * Generate trail difficulty distribution bar
  */
 
@@ -31,7 +32,7 @@ export default function DifficultyBar({ trails }: { trails: Trails }) {
         let distributionStr = "";
 
         distributionStr += '🐰'.repeat(trailsDistribution.bunny);
-        distributionStr += '🟩'.repeat(trailsDistribution.green);
+        distributionStr += '🟢'.repeat(trailsDistribution.green);
         distributionStr += '🟦'.repeat(trailsDistribution.blue);
         distributionStr += '⬥'.repeat(trailsDistribution.black);
         distributionStr += '♦️'.repeat(trailsDistribution.doubleBlack);
