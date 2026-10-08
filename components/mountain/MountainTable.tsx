@@ -78,16 +78,27 @@ const features = tableFeatures({
   },
 });
 
+const getLowestLiftTicketPrice = (prices: PriceInterface) => {
+  const priceOptions = [
+    prices.liftTicketWeekday,
+    prices.liftTicketWeekend,
+  ].filter((price): price is number => price !== undefined);
+
+  return priceOptions.length > 0 ? Math.min(...priceOptions) : undefined;
+};
+
 const columns: Array<ColumnDef<typeof features, Mountain>> = [
   {
     accessorKey: 'name',
     header: 'Mountain/Resort',
     sortFn: "alphanumeric",
+    sortDescFirst: false,
   },
   {
     accessorKey: 'state',
     header: 'State/Location',
     sortFn: "text",
+    sortDescFirst: false,
   },
   //   header: 'Drive Time',
   //   cell: () => "-Drive time",
@@ -102,7 +113,7 @@ const columns: Array<ColumnDef<typeof features, Mountain>> = [
         <DifficultyBar trails={mountain.trails} />
       );
     },
-    enableSorting: false, // TODO: custom
+    enableSorting: false,
   },
   {
     accessorKey: 'verticalDrop',
@@ -116,7 +127,14 @@ const columns: Array<ColumnDef<typeof features, Mountain>> = [
       const mountain = info.row.original;
       return renderLiftTicketPrices(mountain.pricing);
     },
-    enableSorting: false, // for now. TODO: write custom func
+    // get lowest available lift ticket price
+    sortFn: (rowA, rowB) => {
+      const priceA = getLowestLiftTicketPrice(rowA.original.pricing);
+      const priceB = getLowestLiftTicketPrice(rowB.original.pricing);
+
+      return (priceA ?? Infinity) - (priceB ?? Infinity);
+    },
+    sortDescFirst: false,
   },
   {
     accessorKey: 'passes',
