@@ -23,7 +23,7 @@ export default function Home() {
                     Find Your Next Ski+Snowboard Trip
                 </h1>
 
-                <FilterBar passes={passes}/>
+                {/* <FilterBar passes={passes}/> */}
                 <MountainTable mountains={mountains} />
             </main>
             <Footer />
